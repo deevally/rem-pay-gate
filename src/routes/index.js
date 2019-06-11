@@ -1,8 +1,8 @@
 import express from 'express';
-import payment from './payment';
+import paymentRoute from './payment';
 
 const app = express();
 
-app.use('/', payment);
+app.use('/', paymentRoute);
 
 export default app;

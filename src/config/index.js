@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -9,8 +9,9 @@ const config = {
   PAYMENT_STATUS_TEST_URL: process.env.PAYMENT_STATUS_TEST_URL,
   GET_ACTIVE_BANKS_TEST_URL: process.env.GET_ACTIVE_BANKS_TEST_URL,
   PAYMENT_STATUS_BULK_TEST_URL: process.env.PAYMENT_STATUS_BULK_TEST_URL,
-  apiToken: process.env.apiToken,
-  apiKey: process.env.apiKey
+  remApiToken: process.env.remApiToken,
+  remApiKey: process.env.remApiKey,
+  mySecret: process.env.mySecret
 };
 
 export default config;
