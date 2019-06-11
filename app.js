@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
@@ -46,6 +47,30 @@ app.use('*', (req, res, next) => {
   next();
 });
 
+// development error handler
+// will print stacktrace
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.json({
+    errors: {
+      message: err.message,
+      error: err
+    }
+  });
+});
+
+// production error handler
+
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.json({
+    errors: {
+      message: err.message,
+      error: {}
+    }
+  });
+});
 
 process.on('unhandledRejection', (reason) => {
   traceLogger(reason);

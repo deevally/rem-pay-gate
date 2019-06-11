@@ -4,7 +4,6 @@
 import crypto from 'crypto';
 import axios from 'axios';
 import AES_128_ENCRYPT from '../middlewares/encryption/encryption';
-
 // import config module
 import config from '../config/index';
 
@@ -207,9 +206,6 @@ class remitaPaymentController {
         .digest('hex');
 
       transRef = AES_128_ENCRYPT(transRef);
-
-      console.log(transRef);
-
       let dd = d.getDate();
       let mm = d.getMonth() + 1; // January is 0!
       const yyyy = d.getFullYear();
