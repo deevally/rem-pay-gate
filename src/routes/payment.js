@@ -12,11 +12,11 @@ const {
   paymentStatusBulk
 } = remitaPaymentController;
 
-router.post('/getAllBanks', getAllBanks);
-router.post('/getSinglePayment', getSinglePayment);
-router.post('/paymentStatus', paymentStatus);
-router.post('/bulkPayment', bulkPayment);
-router.post('/paymentStatusBulk', paymentStatusBulk);
+router.post('/banks', getAllBanks);
+router.post('/singlepayment', getSinglePayment);
+router.post('/paymentstatus', paymentStatus);
+router.post('/bulkpayment', bulkPayment);
+router.post('/paymentstatusbulk', paymentStatusBulk);
 
 
 export default router;
