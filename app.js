@@ -81,7 +81,7 @@ process.on('uncaughtException', (reason) => {
 });
 
 
-const PORT = process.env.URL || 3000;
+const PORT = process.env.PORT || 3000;
 
 
 app.listen(PORT, () => {
