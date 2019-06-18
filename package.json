@@ -4,9 +4,13 @@
   "description": "End points for various payment actions",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
+    "start": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node app.js"
+    "dev": "nodemon --exec babel-node src/app.js",
+    "clean:dist": "rimraf ./dist",
+    "prebuild": "npm run clean:dist",
+    "build:prod": "npm run prebuild && babel ./src --out-dir dist --copy-files",
+    "heroku-postbuild": "npm run build:prod"
   },
   "engines": {
     "node": "11.10.0"
@@ -28,6 +32,8 @@
     "express": "^4.17.1",
     "helmet": "^3.18.0",
     "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^3.9.0"
   },
