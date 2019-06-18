@@ -8,6 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node app.js"
   },
+  "engines": {
+    "node": "11.10.0"
+  },
   "keywords": [
     "payment"
   ],
