@@ -4,7 +4,7 @@
   "description": "End points for various payment actions",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon --exec babel-node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node app.js"
   },
