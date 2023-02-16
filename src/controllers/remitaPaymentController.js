@@ -4,7 +4,6 @@
 import crypto from 'crypto';
 import axios from 'axios';
 import AES_128_ENCRYPT from '../middlewares/encryption/encryption';
-// import config module
 import config from '../config/index';
 
 
@@ -90,7 +89,7 @@ class remitaPaymentController {
   }
 
   /**
-   *@description get a single payment
+   *@description get a single payment client
    *@static
    *@param  {Object} req - request
    *@param  {object} res - response
